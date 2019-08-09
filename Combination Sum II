@@ -1,0 +1,25 @@
+class Solution {
+public:
+    vector<vector<int>> ans;
+    vector<int>temp;
+    vector<vector<int>> combinationSum2(vector<int>& candidates, int target) {
+        sort(candidates.begin(), candidates.end());
+        dfs(candidates, target, 0);
+        return ans;
+    }
+    
+    void dfs(vector<int>& candidates, int target, int level){
+        if (target == 0){
+            ans.push_back(temp;)
+            return;
+        }
+        if (i > depth && candidates[i] == candidates[i - 1])
+        {
+            continue;
+        }
+
+        temp.push_back(candidates[level]);
+        dfs(candidates, target-candidates[level], level+ 1);
+        temp.pop_back();
+    }
+};
